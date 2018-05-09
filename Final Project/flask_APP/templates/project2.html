@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Breast Cancer Diagnostic</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Predict whether the cancer is benign or malignant</h2>
+		
+	</div>
+	</header>
+    
+<h3 align="center" >Top 5 features selected from 30 features</h3>
+    
+	<div align="center"  class="ml-container">
+
+		<form action="{{ url_for('predict2')}}" method="POST">
+
+    area_mean:<br>
+    <input type="number" name="area_mean" value="18.6">
+    <br>
+    area_se:<br>
+    <input type="number" name="area_se" value="481.9">
+    <br>
+    texture_mean:<br>
+    <input type="number" name="texture_mean" value="0.08005">
+    <br>
+    concavity_worst:<br>
+    <input type="number" name="concavity_worst" value="30.29">
+    <br>
+    concavity_mean:<br>
+    <input type="number" name="concavity_mean" value="0.2671">
+    <br>
+
+    <input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+    
+<p align="center" >
+<a href="/">Back to Home</a></p>
+
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Predict Mammographic Image</h2>
+		
+	</div>
+	</header>
+    <div align="center">
+        <img src= {{ file_path }} >
+    </div>
+    <div class="results">
+	{% if prediction == 'NORM'%}
+	<h2 align="center" style="color:red;">NORM: Normal</h2>
+	{% elif prediction == 'CALC'%}
+	<h2 align="center" style="color:red;">CALC - Calcification</h2>
+	{% elif prediction == 'CIRC'%}
+	<h2 align="center" style="color:red;">CIRC - Well-defined/circumscribed masses</h2>
+	{% elif prediction == 'SPIC'%}
+	<h2 align="center" style="color:red;">SPIC - Spiculated masses</h2>
+	{% elif prediction == 'MISC'%}
+	<h2 align="center" style="color:red;">MISC - Other, ill-defined masses</h2>
+    {% elif prediction == 'ARCH'%}
+	<h2 align="center" style="color:red;">ARCH - Architectural distortion</h2>
+    {% elif prediction == 'ASYM'%}
+	<h2 align="center" style="color:red;">ASYM - Asymmetry</h2>
+	{% endif %}
+	</div>
+<p align="center" >   
+<a href="/project1">Back</a></p>
+    
+</body>
+</html>

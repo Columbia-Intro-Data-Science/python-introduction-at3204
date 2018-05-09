@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIAS Mammography</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Predict Class of Abnormality Mammography</h2>
+		
+	</div>
+	</header>
+
+    <h2 align="center" style="color:blue;">Click image to predict</h2>
+    
+
+    
+	<div align="center" class="ml-container">
+    <form action="{{ url_for('predict1')}}" method="POST">
+    <input type="image" src="/static/test0.png" alt="test0" width="128" height="128" name = "test0" value = 0>
+    <input type="image" src="/static/test1.png" alt="test1" width="128" height="128" name = "test0" value = 1>
+    <input type="image" src="/static/test2.png" alt="test2" width="128" height="128" name = "test0" value = 2>
+    <input type="image" src="/static/test3.png" alt="test3" width="128" height="128" name = "test0" value = 3>
+    <input type="image" src="/static/test4.png" alt="test4" width="128" height="128" name = "test0" value = 4>
+        <br>
+    <input type="image" src="/static/test5.png" alt="test5" width="128" height="128" name = "test0" value = 5>
+    <input type="image" src="/static/test6.png" alt="test6" width="128" height="128" name = "test0" value = 6>
+    <input type="image" src="/static/test7.png" alt="test7" width="128" height="128" name = "test0" value = 7>
+    <input type="image" src="/static/test8.png" alt="test8" width="128" height="128" name = "test0" value = 8>
+    <input type="image" src="/static/test9.png" alt="test9" width="128" height="128" name = "test0" value = 9>
+	</form>
+	</div>
+
+
+<p align="center">
+<a href="/">Back to Home</a></p>
+
+</body>
+</html>
+
